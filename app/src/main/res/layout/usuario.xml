@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo de la Marca -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="400dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logooptiframes"
+            android:contentDescription="@string/logo_optiframes"
+            android:scaleType="fitCenter" />
+
+        <!-- Línea divisora -->
+        <View
+            android:layout_width="750dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black" />
+
+        <!-- Botón de Regresar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/botonretroceder"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/back_button_description" />
+
+            <TextView
+                android:id="@+id/text_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:textColor="#A8A8A8"
+                android:textSize="40sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Imagen de Usuario -->
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/usuario"
+            android:contentDescription="@string/user_image_description"
+            android:scaleType="fitCenter" />
+
+        <!-- Contenedor de Textos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="24dp"
+            android:gravity="start">
+
+            <!-- Texto de Nombre de Usuario -->
+            <TextView
+                android:id="@+id/userNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de usuario"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:layout_gravity="start" />
+
+            <!-- Texto del Nombre Dinámico del Usuario -->
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ian Gonzales"
+                android:textSize="40dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:layout_gravity="start" />
+
+            <!-- Texto de Compras Realizadas -->
+            <TextView
+                android:id="@+id/userPurchasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compras realizadas"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="40dp"
+                android:gravity="start"
+                android:layout_gravity="start" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botón Cerrar Sesión -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Cerrar sesión"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp" />
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ScrollView para el contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/logInferiorImageView"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Botón de Regresar y Texto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start|center_vertical">
+
+                <ImageButton
+                    android:id="@+id/button_back"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/botonretroceder"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/back_button_description" />
+
+                <TextView
+                    android:id="@+id/text_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regresar"
+                    android:textColor="#A8A8A8"
+                    android:textSize="20sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Logo de la Marca -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/logooptiframes"
+                android:contentDescription="@string/logo_optiframes"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Contenedor de los campos de registro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_container"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="24dp"
+                android:elevation="4dp">
+
+                <!-- Campo de Nombre de Usuario -->
+                <TextView
+                    android:id="@+id/usernameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre de usuario"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/usernameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usuario..."
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Campo de Nueva Contraseña -->
+                <TextView
+                    android:id="@+id/newPasswordLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresar nueva contraseña"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/newPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña..."
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Campo de Reingresar Nueva Contraseña -->
+                <TextView
+                    android:id="@+id/reenterPasswordLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reingresar nueva contraseña"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/reenterPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña..."
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edittext" />
+            </LinearLayout>
+
+            <!-- Botón de Registrarse -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrarse"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="24dp"
+                android:gravity="center" />
+
+            <!-- Texto de Ingreso -->
+            <TextView
+                android:id="@+id/loginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya tiene un usuario? Ingrese acá"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Imagen Inferior -->
+    <ImageView
+        android:id="@+id/logInferiorImageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/loginferior"
+        android:contentDescription="@string/inferior_logo_description"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

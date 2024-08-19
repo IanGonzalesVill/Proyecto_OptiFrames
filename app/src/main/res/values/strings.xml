@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">OptiFrames_IanGonzales</string>
+    <string name="image_arnette">Descripción de la imagen Arnette</string>
+    <string name="logo_optiframes">Logo de OptiFrames</string>
+    <string name="logo_carrito">Logo del carrito</string>
+    <string name="logo_usuario">Logo del usuario</string>
+    <string name="button_descuento">Botón de descuento</string>
+    <string name="boton_rayban">Botón RayBan</string>
+    <string name="boton_montblanc">Botón MontBlanc</string>
+    <string name="boton_arnette">Botón Arnette</string>
+    <string name="boton_oakley">Botón Oakley</string>
+    <string name="boton_coach">Botón Coach</string>
+    <string name="image_oakley">Imagen Oakley</string>
+    <string name="back_button_description">Botón de retroceder</string>
+    <string name="product_image_description">Imagen del producto</string>
+    <string name="delete_button_description">Botón de eliminar</string>
+    <string name="inferior_logo_description">Logo inferior</string>
+    <string name="user_image_description">Imagen del usuario</string>
+    <string name="image_producto">Imagen del producto</string>
+</resources>

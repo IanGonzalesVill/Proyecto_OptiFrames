@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Logo de la Marca -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/logo_optiframes"
+            android:src="@drawable/logooptiframes" />
+
+        <!-- Línea Divisora -->
+        <View
+            android:layout_width="388dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/black" />
+
+        <!-- Bienvenida y botones de carrito y usuario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/textView_bienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido, inicie sesión"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/carritoImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/logocarrito"
+                android:contentDescription="@string/logo_carrito"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/usuarioImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logousuario"
+                android:contentDescription="@string/logo_usuario"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <!-- Banner -->
+        <ImageView
+            android:id="@+id/bannerImageView"
+            android:layout_width="400dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/banner"
+            android:contentDescription="@string/button_descuento" />
+
+        <!-- Botones de marcas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_rayban"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/botonrayban"
+                android:contentDescription="@string/boton_rayban"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/button_montblanc"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/botonmontblanc"
+                android:contentDescription="@string/boton_montblanc"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/button_arnette"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/botonarnette"
+                android:contentDescription="@string/boton_arnette"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/button_oakley"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/botonoakley"
+                android:contentDescription="@string/boton_oakley"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/button_coach"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/botoncoach"
+                android:contentDescription="@string/boton_coach"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <!-- Título de Sección "Lentes de Sol" -->
+        <TextView
+            android:id="@+id/textView_lentes_de_sol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lentes de sol"
+            android:textSize="23sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+
+        <!-- Línea Divisora -->
+        <View
+            android:layout_width="200dp"
+            android:layout_height="3dp"
+            android:background="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Contenedor para los productos que se generarán dinámicamente -->
+        <LinearLayout
+            android:id="@+id/productContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+

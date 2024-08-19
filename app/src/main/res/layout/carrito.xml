@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Botón de regresar y texto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/botonretroceder"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/back_button_description" />
+
+        <TextView
+            android:id="@+id/text_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textColor="#A8A8A8"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Línea divisora -->
+    <View
+        android:layout_width="388dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/black" />
+
+    <!-- Mensaje de carrito vacío -->
+    <TextView
+        android:id="@+id/emptyCartTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay productos seleccionados"
+        android:textSize="18sp"
+        android:textColor="#A8A8A8"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <!-- Lista de productos -->
+    <LinearLayout
+        android:id="@+id/productListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <!-- Ejemplo de producto en el carrito -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="8dp">
+
+            <!-- Imagen del producto -->
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/oakley1"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/product_image_description" />
+
+            <!-- Información del producto -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arnette - Modelo B10EC"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/productPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/1,200.00"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Botón de eliminar -->
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/botoneliminar"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/delete_button_description" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Línea divisora -->
+    <View
+        android:layout_width="388dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/black" />
+
+    <!-- Sección Total y Botón de Pagar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Sección Total a Pagar -->
+        <LinearLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/totalTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total a pagar:"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/2,400.00"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Botón Pagar -->
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Pagar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_button"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</LinearLayout>
